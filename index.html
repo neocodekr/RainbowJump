@@ -13,6 +13,17 @@
           let funnelData = null;
           var unityCanvas = document.querySelector("#unity-canvas");
           var unityInstance;
+          var config = {
+              dataUrl: "Build/RainbowJump.data",
+              frameworkUrl: "Build/RainbowJump.framework.js",
+              codeUrl: "Build/RainbowJump.wasm",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "DefaultCompany",
+              productName: "RainbowJump",
+              productVersion: "1.0",
+              // matchWebGLToCanvasSize: false, // Uncomment to control WebGL canvas size separately
+              // devicePixelRatio: 1, // Uncomment to override low DPI rendering
+          };
           if (window.Telegram) {
               // Telegram Web App 초기화
               function initTelegramWebApp() {
