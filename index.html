@@ -8,6 +8,9 @@
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <canvas id="unity-canvas" width=340 height=690 tabindex="-1" style="width: 340px; height: 690px; background: #231F20"></canvas>
     <script src="Build/RainbowJump.loader.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://sad.adsgram.ai/js/sad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
            console.log('starting app');
           let funnelData = null;
@@ -85,7 +88,7 @@
           function sendMessageToUnity() {
               if (unityInstance) {
                   const strFunnel = JSON.stringify(funnelData)
-                  unityInstance.SendMessage('LoadingScene', 'OnReceivedUser', strFunnel ?? '');
+              //    unityInstance.SendMessage('LoadingScene', 'OnReceivedUser', strFunnel ?? '');
               } else {
                   console.error("Unity WebGL is not initialized yet.");
               }
