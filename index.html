@@ -32,9 +32,9 @@
               // Telegram Web App 초기화
               function initTelegramWebApp() {
                   // Telegram WebApp 초기화
-                  const tg = window.Telegram.WebApp;
-                  rewardedAdsgram =  window.Adsgram.init({ blockId: 9466, debug: true });
-                  adController = window.Adsgram.init({ blockId: 9450, debug: true });
+                  const tg = window.Telegram.WebApp; //
+                  rewardedAdsgram =  window.Adsgram.init({ blockId: "9466", debug: true,  debugBannerType: "RewardedVideo"  });
+                  adController = window.Adsgram.init({ blockId: "9450", debug: true, debugBannerType: "FullscreenMedia" });
                   // enableClosingConfirmation 설정 활성화
                   tg.enableClosingConfirmation();
                   tg.disableVerticalSwipes();
